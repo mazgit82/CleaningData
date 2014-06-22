@@ -42,7 +42,10 @@ The names of these variables follow this structure: variable-statistic-axis, whe
 * fBodyGyroscopeMagnitude 
 * fBodyGyroscopeJerkMagnitude
 
-Next, each of these variables will be described, taking advantage of the description present in the raw dataset:
+Next, each of these variables will be described, taking advantage of the description present in the raw dataset. The units of the variables are:
+
+* standard gravity units 'g' for any variable with "Accelerometer" in the name
+* radians/second for any variable with "Gyroscope" in the name
 
 
 The features selected for this database come from the Accelerator and Gyroscope 3-axial raw signals tAccelerator-XYZ and tGyroscope-XYZ. These time domain signals (prefix 't' to denote time) were captured at a constant rate of 50 Hz. Then they were filtered using a median filter and a 3rd order low pass Butterworth filter with a corner frequency of 20 Hz to remove noise. Similarly, the Acceleratoreleration signal was then separated into body and gravity Acceleratoreleration signals (tBodyAccelerator-XYZ and tGravityAccelerator-XYZ) using another low pass Butterworth filter with a corner frequency of 0.3 Hz. 
