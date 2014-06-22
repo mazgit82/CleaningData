@@ -31,6 +31,11 @@ selected <- selected & !deselect
 x <- x[, which(selected)]
   
 featuresSelected <- gsub("[(][])]", "",  features[selected])
+featuresSelected <- gsub("Acc", "Accelerometer",featuresSelected)
+featuresSelected <- gsub("Gyro", "Gyroscope",featuresSelected)
+featuresSelected <- gsub("Mag", "Magnitude",featuresSelected)
+
+
 
 # Appropriately labels the data set with descriptive variable names. 
 names(x) <- featuresSelected
