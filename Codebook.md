@@ -12,7 +12,7 @@ This is the codebook corresponding to the "secondTidySet.txt" dataset. It contai
 * Only the mean and std measurements are kept. It has been decided that although the word mean appears in some variables, they are not the ones meant by the assignment. Those are the meanFreq variables and the angle variables. They have been removed by means of regular expressions
 * In order to make variable names human readable, the following replacements have been carried out: "Acc" => "Accelerometer", "Gyro" => "Gyroscope", "Mag" => "Magnitude"
 * The first tidy data set is constructed by combining the subject, input variables (x), and activity variable (y) with cbind. The result is stored in the "firsTidySet.txt" file
-* A second tidy data set is created by averaging all variables for every subject and activity. ddply (from the plyr package) has been used with this purpose. The result is stored in the "secondTidySet.txt" file
+* The target tidy data set (the one described in this codebook) is created by averaging each variable for every subject and activity. ddply (from the plyr package) has been used with this purpose. 
 
 # Description of Variables
 
@@ -20,7 +20,9 @@ This is the codebook corresponding to the "secondTidySet.txt" dataset. It contai
 
 * activity: Describes the activity performed by the subject. Values: "LAYING" "SITTING" "STANDING" "WALKING" "WALKING_DOWNSTAIRS" "WALKING_UPSTAIRS"
 
-* Next, there are several variables whose name follow this structure: variable-statistic-axis, where statistic can be either mean or std (standard deviation), and axis can be one of X, Y, or Z. The structure of the name can also be variable-statistic in case no axis is associated to that variable. The variable name can be one of the following: 
+* Next, there are several variables that contain the average per subject and activity of the corresponding variables in the first tidy data set. 
+
+The names of these variables follow this structure: variable-statistic-axis, where statistic can be either mean or std (standard deviation), and axis can be one of X, Y, or Z. The structure of the name can also be variable-statistic in case no axis is associated to that variable. The variable name can be one of the following: 
 
 ** tBodyAccelerator 
 ** tGravityAccelerator 
@@ -83,7 +85,6 @@ tBodyAcceleratorJerkMean
 tBodyGyroscopeMean
 tBodyGyroscopeJerkMean
 
-The complete feature set is:
 
 
 
