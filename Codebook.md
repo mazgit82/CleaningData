@@ -24,23 +24,23 @@ This is the codebook corresponding to the "secondTidySet.txt" dataset. It contai
 
 The names of these variables follow this structure: variable-statistic-axis, where statistic can be either mean or std (standard deviation), and axis can be one of X, Y, or Z. The structure of the name can also be variable-statistic in case no axis is associated to that variable. The variable name can be one of the following: 
 
-** tBodyAccelerator 
-** tGravityAccelerator 
-** tBodyAcceleratorJerk 
-** tBodyGyroscope 
-** tBodyGyroscopeJerk 
-** tBodyAcceleratorMagnitude 
-** tGravityAcceleratorMagnitude 
-** tBodyAcceleratorJerkMagnitude 
-** tBodyGyroscopeMagnitude 
-** tBodyGyroscopeJerkMagnitude 
-** fBodyAccelerator 
-** fBodyAcceleratorJerk 
-** fBodyGyroscope 
-** fBodyAcceleratorMagnitude 
-** fBodyAcceleratorJerkMagnitude 
-** fBodyGyroscopeMagnitude 
-** fBodyGyroscopeJerkMagnitude
+* tBodyAccelerator 
+* tGravityAccelerator 
+* tBodyAcceleratorJerk 
+* tBodyGyroscope 
+* tBodyGyroscopeJerk 
+* tBodyAcceleratorMagnitude 
+* tGravityAcceleratorMagnitude 
+* tBodyAcceleratorJerkMagnitude 
+* tBodyGyroscopeMagnitude 
+* tBodyGyroscopeJerkMagnitude 
+* fBodyAccelerator 
+* fBodyAcceleratorJerk 
+* fBodyGyroscope 
+* fBodyAcceleratorMagnitude 
+* fBodyAcceleratorJerkMagnitude 
+* fBodyGyroscopeMagnitude 
+* fBodyGyroscopeJerkMagnitude
 
 Next, each of these variables will be described, taking advantage of the description present in the raw dataset:
 
@@ -54,37 +54,107 @@ Finally a Fast Fourier Transform (FFT) was applied to some of these signals prod
 These signals were used to estimate variables of the feature vector for each pattern:  
 '-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
 
-tBodyAccelerator-XYZ
-tGravityAccelerator-XYZ
-tBodyAcceleratorJerk-XYZ
-tBodyGyroscope-XYZ
-tBodyGyroscopeJerk-XYZ
-tBodyAcceleratorMagnitude
-tGravityAcceleratorMagnitude
-tBodyAcceleratorJerkMagnitude
-tBodyGyroscopeMagnitude
-tBodyGyroscopeJerkMagnitude
-fBodyAccelerator-XYZ
-fBodyAcceleratorJerk-XYZ
-fBodyGyroscope-XYZ
-fBodyAcceleratorMagnitude
-fBodyAcceleratorJerkMagnitude
-fBodyGyroscopeMagnitude
-fBodyGyroscopeJerkMagnitude
+* tBodyAccelerator-XYZ
+* tGravityAccelerator-XYZ
+* tBodyAcceleratorJerk-XYZ
+* tBodyGyroscope-XYZ
+* tBodyGyroscopeJerk-XYZ
+* tBodyAcceleratorMagnitude
+* tGravityAcceleratorMagnitude
+* tBodyAcceleratorJerkMagnitude
+* tBodyGyroscopeMagnitude
+* tBodyGyroscopeJerkMagnitude
+* fBodyAccelerator-XYZ
+* fBodyAcceleratorJerk-XYZ
+* fBodyGyroscope-XYZ
+* fBodyAcceleratorMagnitude
+* fBodyAcceleratorJerkMagnitude
+* fBodyGyroscopeMagnitude
+* fBodyGyroscopeJerkMagnitude
 
 The set of variables that were estimated from these signals are: 
 
-mean(): Mean value
-std(): Standard deviation
+* mean(): Mean value
+* std(): Standard deviation
 
 Additional vectors obtained by averaging the signals in a signal window sample:
 
-gravityMean
-tBodyAcceleratorMean
-tBodyAcceleratorJerkMean
-tBodyGyroscopeMean
-tBodyGyroscopeJerkMean
+* gravityMean
+* tBodyAcceleratorMean
+* tBodyAcceleratorJerkMean
+* tBodyGyroscopeMean
+* tBodyGyroscopeJerkMean
 
+The complete feature set is:
+
+* subject
+* activity
+* tBodyAccelerometer-mean-X 
+* tBodyAccelerometer-mean-Y 
+* tBodyAccelerometer-mean-Z 
+* tBodyAccelerometer-std-X 
+* tBodyAccelerometer-std-Y 
+* tBodyAccelerometer-std-Z 
+* tGravityAccelerometer-mean-X 
+* tGravityAccelerometer-mean-Y 
+* tGravityAccelerometer-mean-Z 
+* tGravityAccelerometer-std-X 
+* tGravityAccelerometer-std-Y 
+* tGravityAccelerometer-std-Z 
+* tBodyAccelerometerJerk-mean-X 
+* tBodyAccelerometerJerk-mean-Y 
+* tBodyAccelerometerJerk-mean-Z 
+* tBodyAccelerometerJerk-std-X 
+* tBodyAccelerometerJerk-std-Y 
+* tBodyAccelerometerJerk-std-Z 
+* tBodyGyroscope-mean-X 
+* tBodyGyroscope-mean-Y 
+* tBodyGyroscope-mean-Z 
+* tBodyGyroscope-std-X 
+* tBodyGyroscope-std-Y 
+* tBodyGyroscope-std-Z 
+* tBodyGyroscopeJerk-mean-X 
+* tBodyGyroscopeJerk-mean-Y 
+* tBodyGyroscopeJerk-mean-Z 
+* tBodyGyroscopeJerk-std-X 
+* tBodyGyroscopeJerk-std-Y 
+* tBodyGyroscopeJerk-std-Z 
+* tBodyAccelerometerMagnitude-mean 
+* tBodyAccelerometerMagnitude-std 
+* tGravityAccelerometerMagnitude-mean 
+* tGravityAccelerometerMagnitude-std 
+* tBodyAccelerometerJerkMagnitude-mean 
+* tBodyAccelerometerJerkMagnitude-std 
+* tBodyGyroscopeMagnitude-mean 
+* tBodyGyroscopeMagnitude-std 
+* tBodyGyroscopeJerkMagnitude-mean 
+* tBodyGyroscopeJerkMagnitude-std 
+* fBodyAccelerometer-mean-X 
+* fBodyAccelerometer-mean-Y 
+* fBodyAccelerometer-mean-Z 
+* fBodyAccelerometer-std-X 
+* fBodyAccelerometer-std-Y 
+* fBodyAccelerometer-std-Z 
+* fBodyAccelerometerJerk-mean-X 
+* fBodyAccelerometerJerk-mean-Y 
+* fBodyAccelerometerJerk-mean-Z 
+* fBodyAccelerometerJerk-std-X 
+* fBodyAccelerometerJerk-std-Y 
+* fBodyAccelerometerJerk-std-Z 
+* fBodyGyroscope-mean-X 
+* fBodyGyroscope-mean-Y 
+* fBodyGyroscope-mean-Z 
+* fBodyGyroscope-std-X 
+* fBodyGyroscope-std-Y 
+* fBodyGyroscope-std-Z 
+* fBodyAccelerometerMagnitude-mean 
+* fBodyAccelerometerMagnitude-std 
+* fBodyBodyAccelerometerJerkMagnitude-mean 
+* fBodyBodyAccelerometerJerkMagnitude-std 
+* fBodyBodyGyroscopeMagnitude-mean 
+* fBodyBodyGyroscopeMagnitude-std 
+* fBodyBodyGyroscopeJerkMagnitude-mean 
+* fBodyBodyGyroscopeJerkMagnitude-std 
 
 
 
